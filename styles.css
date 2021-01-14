@@ -17,17 +17,23 @@
 
 .top {
     border-bottom: 1px solid black;
+    cursor: pointer;
 }
 
 .bottom {
-    border-top: 1px solid blue;
+    border-top: 1px solid black;
+    cursor: pointer;
 }
 
 .left {
-    border-right: 1px solid crimson;
+    border-right: 1px solid black;
 }
 
 .right {
-    border-left: 1px solid orangered;
+    border-left: 1px solid black;
+}
+
+.center {
+    cursor: pointer;
 }
 
