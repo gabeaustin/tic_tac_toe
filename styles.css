@@ -3,12 +3,6 @@
     text-align: center;
 }
 
-/* .top, .center, .bottom {
-    float: left;
-    height: 100px;
-    width: 100px;
-} */
-
 .row > div {
     float: left;
     height: 100px;
@@ -19,4 +13,25 @@
     clear: both;
     margin: auto;
     width: 302px;
+}
+
+.top {
+    border-bottom: 1px solid black;
+    /* cursor: pointer; */
+}
+
+.bottom {
+    border-top: 1px solid pink;
+    /* cursor: pointer; */
+
+}
+
+.left {
+    border-right: 1px solid green;
+    /* cursor: pointer; */
+}
+
+.right {
+    border-left: 1px solid orange;
+    /* cursor: pointer; */
 }
