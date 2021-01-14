@@ -1,10 +1,10 @@
-.top {
+#board {
     padding: 3em;
     text-align: center;
 }
 
-.row > div {
-    float: left;
+.row > .top, .middle, .bottom, .center {
+    float:left;
     height: 100px;
     width: 100px;
 }
@@ -17,21 +17,17 @@
 
 .top {
     border-bottom: 1px solid black;
-    /* cursor: pointer; */
 }
 
 .bottom {
-    border-top: 1px solid pink;
-    /* cursor: pointer; */
-
+    border-top: 1px solid blue;
 }
 
 .left {
-    border-right: 1px solid green;
-    /* cursor: pointer; */
+    border-right: 1px solid crimson;
 }
 
 .right {
-    border-left: 1px solid orange;
-    /* cursor: pointer; */
+    border-left: 1px solid orangered;
 }
+
