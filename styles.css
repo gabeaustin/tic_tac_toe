@@ -3,10 +3,15 @@
     text-align: center;
 }
 
-.row > .top, .middle, .bottom, .center {
-    float:left;
+/* all 9 cells */
+/* .row > .top, .middle, .bottom, .center { */
+.row > div {
+    float: left;
     height: 100px;
     width: 100px;
+    /* help from video - commented out while developing/testing */
+    line-height: 100px;
+    font-size: 75px;
 }
 
 .row {
@@ -35,5 +40,15 @@
 
 .center {
     cursor: pointer;
+}
+
+
+
+.x {
+    background-color: pink;
+}
+
+.y {
+    background-color: green;;
 }
 
