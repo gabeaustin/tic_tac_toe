@@ -1,21 +1,30 @@
 let cells = document.querySelectorAll(".row > div");
-let timesClicked = 0; // This will determine who clicks first to set X or O
+// let timesClicked = 0; 
+// cells[0].textContent -> used to check to see who has won
 
-// cells[0].textContent; - this will help determine who won
 
 for (let i = 0; i < cells.length; i++) {
     cells[i].addEventListener("click", cellClicked);
 }
 
-// This changes the same cell if clicked twice from X to O - WORK ON
-function cellClicked() {
-    if (timesClicked % 2 == 0) {
-        event.target.textContent = "X";
-    } else {
-        event.target.textContent = "O";
+
+function cellClicked(event) {
+    event.target.textContent = "X";
+    // dot target represents what we clicked on
+
+    // this section of code checks all the possibilities for X to win
+    if (cells[0].textContent == "X" && cells[1].textContent == "X" && cells[2].textContent == "X") {
+        console.log("X Wins!!");
+    } else if (cells[0].textContent == "X" && cells[4].textContent == "X" && cells[8].textContent == "X") {
+        console.log("X Wins!!");
+    } else if (cells[0].textContent == "X" && cells[3].textContent == "X" && cells[6].textContent == "X") {
+        console.log("X Wins!!");
+    } else if (cells[2].textContent == "X" && cells[5].textContent == "X" && cells[8].textContent == "X") {
+        console.log("X Wins!!");
+    } else if (cells[6].textContent == "X" && cells[7].textContent == "X" && cells[8].textContent == "X") {
+        console.log("X Wins!!");
+    } else if (cells[2].textContent == "X" && cells[4].textContent == "X" && cells[6].textContent == "X") {
+        console.log("X Wins!!");
+
     }
-
-    timesClicked++;
 }
-
-
