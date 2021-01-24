@@ -47,19 +47,7 @@
     cursor: pointer;
 }
 
-#yourTurnX {
-    float: left;
-    height: 100px;
-    font-size: 40px;
-}
-
-#yourTurnO {
-    float: right;
-    height: 100px;
-    font-size: 40px;
-}
-
-#seperatorBetweenXAndO, #displayTheWinner {
+#displayTheWinner {
     clear: both;
     margin: auto;
     font-size: 40px;
