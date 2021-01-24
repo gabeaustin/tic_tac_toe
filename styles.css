@@ -9,6 +9,7 @@
     height: 100px;
     width: 100px;
     line-height: 100px;
+    font-size: 75px;
 }
 
 .row {
@@ -21,8 +22,7 @@
     clear: both;
     margin: auto;
     width: 602px;
-    background-color: yellow; /* for testing only */
-    border: tomato solid 1px; /* for testing only */
+    padding: 2rem;
 }
 
 .top {
@@ -48,22 +48,18 @@
 }
 
 #yourTurnX {
-    color: #ff0000;
     float: left;
-    border: 1px black solid;
     height: 100px;
     font-size: 40px;
 }
 
-#yourTurnY {
-    color: #ff0000;
+#yourTurnO {
     float: right;
-    border: 1px black solid;
     height: 100px;
     font-size: 40px;
 }
 
-#seperatorBetweenXAndY {
+#seperatorBetweenXAndO, #displayTheWinner {
     clear: both;
     margin: auto;
     font-size: 40px;
