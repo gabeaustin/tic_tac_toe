@@ -4,20 +4,25 @@
 }
 
 /* all 9 cells */
-/* .row > .top, .middle, .bottom, .center { */
 .row > div {
     float: left;
     height: 100px;
     width: 100px;
-    /* help from video - commented out while developing/testing */
     line-height: 100px;
-    font-size: 75px;
 }
 
 .row {
     clear: both;
     margin: auto;
     width: 302px;
+}
+
+.winner-row {
+    clear: both;
+    margin: auto;
+    width: 602px;
+    background-color: yellow; /* for testing only */
+    border: tomato solid 1px; /* for testing only */
 }
 
 .top {
@@ -42,13 +47,27 @@
     cursor: pointer;
 }
 
-
-
-.x {
-    background-color: pink;
+#yourTurnX {
+    color: #ff0000;
+    float: left;
+    border: 1px black solid;
+    height: 100px;
+    font-size: 40px;
 }
 
-.y {
-    background-color: green;;
+#yourTurnY {
+    color: #ff0000;
+    float: right;
+    border: 1px black solid;
+    height: 100px;
+    font-size: 40px;
 }
+
+#seperatorBetweenXAndY {
+    clear: both;
+    margin: auto;
+    font-size: 40px;
+}
+
+
 
