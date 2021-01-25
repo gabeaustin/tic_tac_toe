@@ -8,7 +8,7 @@ let announceWinner = document.getElementById("displayTheWinner");
 startGame();
 
 function startGame() {
-    document.querySelector(".endgame").style.display = "none";
+    // document.querySelector(".endgame").style.display = "none";
     blankBoard = Array.from(Array(9).keys()); // research more
 
     for (let i = 0; i < cells.length; i++) {
@@ -16,7 +16,6 @@ function startGame() {
         cells[i].innerHTML = ""; // clears the board
         cells[i].style.removeProperty("background-color");
     }
-    // 
 }
 
 function cellClicked(event) {
