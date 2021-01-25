@@ -12,8 +12,10 @@ function startGame() {
 
     for (let i = 0; i < cells.length; i++) {
         cells[i].addEventListener("click", cellClicked);
-        cells[i].innerHTML = ""; // clears the board
+        cells[i].textContent = ""; // clears the board
         cells[i].style.removeProperty("background-color");
+        
+        // if (cells[i].textContent !== " ") return;
     }
 }
 
@@ -24,6 +26,21 @@ function cellClicked(event) {
         event.target.textContent = "X";
         playerDisplay.innerHTML = "Player O - Your Turn";
         playerX = false; // used to change the user back to O
+
+        for (let j = 0; j < cells.length; j++) {
+            if ((cells[0].textContent === "X" || cells[0].textContent === "O") &&
+                (cells[1].textContent === "X" || cells[1].textContent === "O") &&
+                (cells[3].textContent === "X" || cells[3].textContent === "O") &&
+                (cells[2].textContent === "X" || cells[2].textContent === "O") &&
+                (cells[5].textContent === "X" || cells[5].textContent === "O") &&
+                (cells[4].textContent === "X" || cells[4].textContent === "O") &&
+                (cells[7].textContent === "X" || cells[7].textContent === "O") &&
+                (cells[6].textContent === "X" || cells[6].textContent === "O") &&
+                (cells[8].textContent === "X" || cells[8].textContent === "O")) {
+                
+                announceWinner.textContent = "This game is a DRAW!";
+            }
+        }
 
         if (cells[0].textContent == "X" && cells[1].textContent == "X" && cells[2].textContent == "X") {
             announceWinner.innerHTML = "X is the WINNER!!";
@@ -177,25 +194,6 @@ function cellClicked(event) {
             gameOver;
 
         }
-
-        for (let j = 0; j < cells.length; j++) {   
-
-            if ((cells[0].textContent === "X" || cells[0].textContent === "O") &&
-            (cells[1].textContent === "X" || cells[1].textContent === "O") &&
-            (cells[2].textContent === "X" || cells[2].textContent === "O") &&
-            (cells[3].textContent === "X" || cells[3].textContent === "O") &&
-            (cells[4].textContent === "X" || cells[4].textContent === "O") &&
-            (cells[5].textContent === "X" || cells[5].textContent === "O") &&
-            (cells[6].textContent === "X" || cells[6].textContent === "O") &&
-            (cells[7].textContent === "X" || cells[7].textContent === "O") &&
-            (cells[8].textContent === "X" || cells[8].textContent === "O")) {
-                console.log("Draw");
-            }
-        }
-
-        
-
     }
-
 }
 
