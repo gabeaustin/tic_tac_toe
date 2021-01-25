@@ -1,14 +1,22 @@
+let blankBoard;
 let cells = document.querySelectorAll(".row > div");
 let playerX = true;
-// let currentPlayer = "playerX";
-let playerDisplay = document.querySelector("#player");
+let gameOver = true;
+let playerDisplay = document.querySelector(".player");
 let announceWinner = document.getElementById("displayTheWinner");
 
-let gameOver = true;
+startGame();
 
-// this goes through the cells array and adds a click event to all 9 cells
-for (let i = 0; i < cells.length; i++) {
-    cells[i].addEventListener("click", cellClicked);
+function startGame() {
+    document.querySelector(".endgame").style.display = "none";
+    blankBoard = Array.from(Array(9).keys()); // research more
+
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].addEventListener("click", cellClicked);
+        cells[i].innerHTML = ""; // clears the board
+        cells[i].style.removeProperty("background-color");
+    }
+    // 
 }
 
 function cellClicked(event) {
@@ -16,9 +24,8 @@ function cellClicked(event) {
     if (playerX === true) {
         // this section of code checks all the possibilities for "X" to win
         event.target.textContent = "X";
-        playerDisplay.innerHTML = "Player O\nYour Turn";
+        playerDisplay.innerHTML = "Player O - Your Turn";
         playerX = false; // used to change the user back to O
-
 
         if (cells[0].textContent == "X" && cells[1].textContent == "X" && cells[2].textContent == "X") {
             announceWinner.innerHTML = "X is the WINNER!!";
@@ -97,9 +104,8 @@ function cellClicked(event) {
     } else if (playerX === false) {
         // this section of code checks all the possibilities for "O" to win
         event.target.textContent = "O";
-        playerDisplay.innerHTML = "Player X\nYour Turn";
+        playerDisplay.innerHTML = "Player X - Your Turn";
         playerX = true; // used to change the user back to X
-
 
         if (cells[0].textContent == "O" && cells[1].textContent == "O" && cells[2].textContent == "O") {
             announceWinner.innerHTML = "O is the WINNER!!";
@@ -176,8 +182,5 @@ function cellClicked(event) {
 
     }
 
-    if (announceWinner.innerHTML === "X is the WINNER!!" || announceWinner.innerHTML === "O is the WINNER!!")  {
-        playerDisplay.innerHTML = " ";
-    }
 }
 

@@ -10,7 +10,8 @@
         <div id="board">
             <h1>Tic Tac Toe</h1>
 
-            <h2 id="player"></h3>
+            <!-- <h2 id="player"></h3> -->
+            <div class="winner-row player" id="displayTheWinner"></div>
             <div class="row">
                 <div class="top left" id="top-left"></div>
                 <!-- id="top-left" -->
@@ -38,7 +39,10 @@
                 <!-- id="bottom-right" -->
             </div>
 
-            <div class="winner-row" id="displayTheWinner"></div>
+            <!-- <button onclick="cellClicked()">Replay</button> -->
+            <div class="endgame"></div>
+
+            <button onclick="startGame()">Replay</button>
         </div>
 
         <script src="app.js"></script>
